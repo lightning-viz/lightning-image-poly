@@ -1,0 +1,29 @@
+{
+  "name": "lightning-image-poly",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "leaflet": "^0.7.3",
+    "lightning-client-utils": "^0.6.3",
+    "lightning-image": "0.0.2",
+    "lightning-visualization": "^0.0.6",
+    "lodash": "^3.10.0"
+  },
+  "keywords": [
+    "lightning-visualization"
+  ],
+  "devDependencies": {
+    "brfs": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "lightning": {
+    "sampleData": []
+  }
+}
