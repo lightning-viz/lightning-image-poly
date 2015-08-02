@@ -1,6 +1,6 @@
 {
   "name": "lightning-image-poly",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "jquery": "^2.1.4",
     "leaflet": "^0.7.3",
