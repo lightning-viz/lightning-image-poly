@@ -28,6 +28,6 @@
     "url": "git+https://github.com/lightning-viz/lightning-image-poly.git"
   },
   "lightning": {
-    "sampleData": []
+    "name": "image-poly"
   }
 }
