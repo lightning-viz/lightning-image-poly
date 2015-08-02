@@ -2,27 +2,26 @@
 
 var ImageViz = require('lightning-image');
 var utils = require('lightning-client-utils');
-var styles = fs.readFileSync(__dirname + '/styles/style.css');
+var validator = require("geojson-validation");
 var _ = require('lodash');
 var L;
+var F
 
-/* 
-// Uncomment this code to require an optional stylesheet
 var fs = require('fs');
-var styles = fs.readFileSync(__dirname + '/test.css');
-*/
+var css = fs.readFileSync(__dirname + '/style.css');
+var template = _.template(fs.readFileSync(__dirname + '/templates/index.html'));
 
 /*
  * Extend the base visualization object
  */
 var Visualization = ImageViz.extend({
 
-    styles: styles,
-
     init: function() {
 
         // wait until domready to require leaflet
         L = require('leaflet');
+        F = require('leaflet.freedraw-browserify');
+        F(L);
 
         this.identifier = utils.getUniqueId();
         var markup = template({identifier: this.identifier});
@@ -31,11 +30,20 @@ var Visualization = ImageViz.extend({
         this.render();
     },
 
+    render: function() {
+        this.img = new Image();
+        this.img.onload = this.onImageLoad.bind(this);
+        this.img.src = utils.cleanImageURL(this.images[0]);
+    },
+
+    css: css,
+
     onImageLoad: function() {
 
-        var img = this.img;
-        var maxWidth = this.width;
-        var self = this;
+        var img = this.img
+        var data = this.data
+        var maxWidth = this.width
+        var self = this
 
         // get image dimensions
         var imw = img.width;
@@ -87,6 +95,8 @@ var Visualization = ImageViz.extend({
         
         // add the free drawing layer
         map.addLayer(freeDraw);
+
+        var COLOR_MODES
 
         // initialize with any polygons from the data
         if (!_.isEmpty(data)) {
@@ -156,10 +166,10 @@ var Visualization = ImageViz.extend({
 
         }
 
-
         var mod = function(x, n) {
             return ((x%n)+n)%n;
         };
+
         function keydown() {
             if (d3.event.altKey) {
                 freeDraw.setMode(L.FreeDraw.MODES.EDIT);
@@ -213,6 +223,8 @@ var Visualization = ImageViz.extend({
         this.$el.unbind().click(function() {
             getUserData()
         });
+
+        var coords
 
         utils.getSettings(this, function(err, settings) {
             if(!err) {
@@ -270,7 +282,6 @@ var Visualization = ImageViz.extend({
             }
 
             data.color = retColor
-
             data.polygons = polygons
         }
 
