@@ -7,7 +7,7 @@
     "leaflet": "^0.7.3",
     "leaflet.freedraw-browserify": "~1.2.4",
     "lightning-client-utils": "^0.6.3",
-    "lightning-image": "0.0.2",
+    "lightning-image": "^0.0.7",
     "lightning-visualization": "^0.1.0",
     "lodash": "^3.10.0",
     "geojson-validation": "^0.1.5"
