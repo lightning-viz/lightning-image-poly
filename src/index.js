@@ -90,7 +90,7 @@ var Visualization = ImageViz.extend({
 
         // set free drawing options
         freeDraw.options.attemptMerge = false;
-        freeDraw.options.setHullAlgorithm('brian3kb/graham_scan_js');
+        freeDraw.options.setHullAlgorithm(false);
         freeDraw.options.setSmoothFactor(0);
         
         // add the free drawing layer
