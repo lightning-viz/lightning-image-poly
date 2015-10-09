@@ -1,6 +1,6 @@
 {
   "name": "lightning-image-poly",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "dependencies": {
     "brfs": "^1.4.0",
     "jquery": "^2.1.4",
