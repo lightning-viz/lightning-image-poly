@@ -90,7 +90,7 @@ var Visualization = ImageViz.extend({
 
         // set free drawing options
         freeDraw.options.attemptMerge = false;
-        freeDraw.options.setHullAlgorithm(false);
+        freeDraw.options.setHullAlgorithm('Wildhoney/ConcaveHull');
         freeDraw.options.setSmoothFactor(0);
         
         // add the free drawing layer
