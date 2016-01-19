@@ -3,14 +3,15 @@
   "version": "0.0.7",
   "dependencies": {
     "brfs": "^1.4.0",
+    "d3": "^3.5.12",
+    "geojson-validation": "^0.1.5",
     "jquery": "^2.1.4",
     "leaflet": "^0.7.3",
     "leaflet.freedraw-browserify": "~1.2.5",
     "lightning-client-utils": "^0.6.3",
     "lightning-image": "^0.0.7",
     "lightning-visualization": "^0.1.0",
-    "lodash": "^3.10.0",
-    "geojson-validation": "^0.1.5"
+    "lodash": "^3.10.0"
   },
   "keywords": [
     "lightning-visualization"

@@ -5,7 +5,8 @@ var utils = require('lightning-client-utils');
 var validator = require("geojson-validation");
 var _ = require('lodash');
 var L;
-var F
+var F;
+var d3 = require('d3');
 
 var fs = require('fs');
 var css = fs.readFileSync(__dirname + '/style.css');
