@@ -7,6 +7,7 @@ var _ = require('lodash');
 var L;
 var F;
 var d3 = require('d3');
+var $ = require('jquery');
 
 var fs = require('fs');
 var css = fs.readFileSync(__dirname + '/style.css');
@@ -239,7 +240,7 @@ var Visualization = ImageViz.extend({
         var coords
 
         utils.getSettings(this, function(err, settings) {
-            if(!err) {
+            if(!err && settings) {
                 coords = settings.coords;
             }
         });
