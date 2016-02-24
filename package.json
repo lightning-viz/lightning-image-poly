@@ -10,7 +10,7 @@
     "leaflet.freedraw-browserify": "~1.2.5",
     "lightning-client-utils": "^0.6.3",
     "lightning-image": "^0.0.7",
-    "lightning-visualization": "^0.1.0",
+    "lightning-visualization": "^0.1.5",
     "lodash": "^3.10.0"
   },
   "keywords": [
