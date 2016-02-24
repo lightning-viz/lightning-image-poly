@@ -231,6 +231,7 @@ var Visualization = ImageViz.extend({
                     console.log(err);
                 }
             });
+            self.emit('draw', coords)
         }
 
         this.$el.unbind().click(function() {
