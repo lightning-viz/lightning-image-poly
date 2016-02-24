@@ -1,6 +1,6 @@
 {
   "name": "lightning-image-poly",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "brfs": "^1.4.0",
     "d3": "^3.5.12",
